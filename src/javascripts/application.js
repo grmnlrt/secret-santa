@@ -4,28 +4,28 @@ import '../stylesheets/application.scss';
 
 import Typed from 'typed.js';
 
-const getSecretName = () => {
+const getSecret = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('secretName');
+  return urlParams.get('secret');
 }
 
-const decodeName = () => {
-  const name = getSecretName();
+const decodeString = () => {
+  const name = getSecret();
   if (name === null) {
     return null;
   }
   return atob(name);
 }
 
-const displayName = () => {
-  const name = decodeName();
+const displayString = () => {
+  const name = decodeString();
   console.log(name)
   new Typed('#decrypted-string', {
     strings: [name],
     typeSpeed: 60,
-    startDelay: 2000,
+    startDelay: 0,
     showCursor: false
   });
 }
 
-displayName();
+displayString();
