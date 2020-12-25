@@ -19337,7 +19337,7 @@ const displayString = () => {
   new typed_js__WEBPACK_IMPORTED_MODULE_3___default.a('#decrypted-string', {
     strings: [name],
     typeSpeed: 60,
-    startDelay: 0,
+    startDelay: 2000,
     showCursor: false
   });
 }
