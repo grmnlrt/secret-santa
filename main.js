@@ -19333,13 +19333,14 @@ const decodeString = () => {
 
 const displayString = () => {
   const name = decodeString();
-  console.log(name)
-  new typed_js__WEBPACK_IMPORTED_MODULE_3___default.a('#decrypted-string', {
-    strings: [name],
-    typeSpeed: 60,
-    startDelay: 2000,
-    showCursor: false
-  });
+  if (name !== null) {
+    new typed_js__WEBPACK_IMPORTED_MODULE_3___default.a('#decrypted-string', {
+      strings: [name],
+      typeSpeed: 60,
+      startDelay: 2000,
+      showCursor: false
+    });
+  }
 }
 
 displayString();
