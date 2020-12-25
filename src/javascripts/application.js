@@ -19,13 +19,14 @@ const decodeString = () => {
 
 const displayString = () => {
   const name = decodeString();
-  console.log(name)
-  new Typed('#decrypted-string', {
-    strings: [name],
-    typeSpeed: 60,
-    startDelay: 2000,
-    showCursor: false
-  });
+  if (name !== null) {
+    new Typed('#decrypted-string', {
+      strings: [name],
+      typeSpeed: 60,
+      startDelay: 2000,
+      showCursor: false
+    });
+  }
 }
 
 displayString();
