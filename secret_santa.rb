@@ -1,6 +1,6 @@
 require 'base64'
 
-names = ["Adeline", "Maxime (Herve)", "Sandra", "Benjam", "Pauline", "O'Neil", "Matthieu", "Cote", "Franz", "Maxou (Le Squere)", "Mika", "Germain", "Marion"]
+names = ["Adeline", "Maxime (Herve)", "Sandra", "Benjam", "Pauline", "O'Neil", "Mathieu", "Cote", "Franz", "Maxou (Le Squere)", "Mika", "Germain", "Marion"]
 
 shuffled_names = names.shuffle
 
