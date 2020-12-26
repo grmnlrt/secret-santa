@@ -19592,7 +19592,12 @@ const decodeString = () => {
   if (name === null) {
     return null;
   }
-  return atob(name);
+  try {
+    return atob(name);
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }
 
 const addConfettis = () => {
