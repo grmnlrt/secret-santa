@@ -3,6 +3,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import '../stylesheets/application.scss';
 
 import Typed from 'typed.js';
+import ConfettiGenerator from "confetti-js";
 
 const getSecret = () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -15,6 +16,17 @@ const decodeString = () => {
     return null;
   }
   return atob(name);
+}
+
+const addConfettis = () => {
+  const confetti = new ConfettiGenerator({
+    target: "confettis",
+    max: 100, // 80
+    size: 1, // 1
+    clock: 30, // 25
+    rotate: true // false
+  });
+  confetti.render();
 }
 
 const displayString = () => {
@@ -30,3 +42,4 @@ const displayString = () => {
 }
 
 displayString();
+addConfettis();
