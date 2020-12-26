@@ -1,9 +1,20 @@
+body {
+  overflow: hidden;
+}
+
+#confettis {
+  background: black;
+}
+
 #content {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 #decrypted-string {
